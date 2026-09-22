@@ -14,4 +14,7 @@ while(win == False):
         print("YOU WIN!")
         win = True
         print("You made it in ", number_of_guesses, " guesses!")
-        
+        if number_of_guesses > 10:
+            print("You're okay at this game I guess...")
+        elif number_of_guesses < 10:
+            print("Wow you're actually half decent at this game")
