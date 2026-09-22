@@ -1,9 +1,11 @@
 import random
-game_number = random.randint(1,10)
-print(game_number)
+game_number = random.randint(1,100)
+#print(game_number)
 win = False
+number_of_guesses = 0
 while(win == False):
-    guess = int(input("Pick a random number 1-10: "))
+    guess = int(input("Pick a random number 1-100: "))
+    number_of_guesses = number_of_guesses + 1
     if guess > game_number:
         print("Too High")
     elif guess < game_number:
@@ -11,3 +13,5 @@ while(win == False):
     else: 
         print("YOU WIN!")
         win = True
+        print("You made it in ", number_of_guesses, " guesses!")
+        
